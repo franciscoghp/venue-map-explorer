@@ -1,27 +1,28 @@
-# Getting Started with Geolocation App by Ing. Francisco Herrera
+# 🗺️ Venue Map Explorer
 
-## Available Scripts
+Interactive map app built with **React**, **Leaflet** and **React Router**.
 
-First you need to install all dependecies, please run:  
+- 📍 Jump to your current location (browser geolocation) and drop a pin there
+- 🖱️ Click anywhere on the map to add markers
+- 📌 10 curated London venues (galleries, markets, parks) with a description for each pin
+- 🌍 Load a remote set of venues (Berlin) from a JSON API
+- 🗺️ OpenStreetMap tiles, no API key required
 
-### `npm install`
+**Stack:** React 18 · react-leaflet · Leaflet · React Router · Bootstrap
 
-Then, you can run de app with:
+## Run locally
 
-### `npm start`
+```bash
+npm install
+npm start        # http://localhost:3000
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deploy
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Static site, deploys as-is on **Vercel** (framework preset: *Create React App*).
+`vercel.json` rewrites every path to `index.html` so client-side routes such as `/map` work on refresh.
 
-## This project render a global map where you can navigate to 3 places inicialy: 
+## Notes
 
-##  1. Your current location in the world.
-
-##  2. London, loaded through mock data included in the app.
-
-## 3. Berlin, loaded through fetching data from a specified mock API.
-
-Feel free to use this applicaction and enjoy.
+The venues fetched from the "Berlin" option come from a public mock server
+(`my-json-server.typicode.com/franciscoghp/db-places`), backed by the [`db-places`](https://github.com/franciscoghp/db-places) repository.
